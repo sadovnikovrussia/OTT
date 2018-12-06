@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OTT</string>
+    <string name="load_finished">Загрузка закончена</string>
+</resources>
