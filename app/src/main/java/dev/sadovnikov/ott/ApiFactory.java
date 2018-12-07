@@ -13,14 +13,14 @@ public class ApiFactory {
     private static final OkHttpClient CLIENT = new OkHttpClient();
 
     @NonNull
-    public static OTTService getAirportService() {
+    public static OTTService getOTTService() {
         return getRetrofit().create(OTTService.class);
     }
 
     @NonNull
     private static Retrofit getRetrofit() {
         return new Retrofit.Builder()
-                .baseUrl("http://api.travelpayouts.com/data/ru/")
+                .baseUrl("https://api.myjson.com/bins/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(CLIENT)
                 .build();

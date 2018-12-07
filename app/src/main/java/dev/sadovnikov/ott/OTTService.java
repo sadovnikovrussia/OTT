@@ -7,6 +7,12 @@ import retrofit2.http.GET;
 
 public interface OTTService {
 
-    @GET("hotels.json")
+    @GET("12q3ws")
     Call<List<Hotel>> getHotels();
+
+    @GET("zqxvw")
+    Call<List<Flight>> getFlights();
+
+    @GET("8d024")
+    Call<List<Company>> getCompanies();
 }
