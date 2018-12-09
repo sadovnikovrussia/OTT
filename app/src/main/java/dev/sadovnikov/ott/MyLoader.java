@@ -1,13 +1,15 @@
 package dev.sadovnikov.ott;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.AsyncTaskLoader;
+import android.support.v4.content.Loader;
 import android.util.Log;
 
-public class MyLoader extends AsyncTaskLoader<Integer> {
+public class MyLoader extends Loader<Cursor> {
 
     private static final String TAG = "MyLoader";
     
@@ -23,11 +25,5 @@ public class MyLoader extends AsyncTaskLoader<Integer> {
         forceLoad();
     }
 
-    @Nullable
-    @Override
-    public Integer loadInBackground() {
-        Log.d(TAG, "loadInBackground: ");
-        SystemClock.sleep(4000);
-        return 5;
-    }
+
 }

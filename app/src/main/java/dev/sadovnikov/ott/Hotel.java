@@ -2,12 +2,22 @@ package dev.sadovnikov.ott;
 
 import android.support.annotation.NonNull;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 public class Hotel {
+
+    @SerializedName("id")
     private long id;
+
+    @SerializedName("flights")
     private ArrayList<Long> flightsIds;
+
+    @SerializedName("name")
     private String name;
+
+    @SerializedName("price")
     private Long price;
 
     Hotel(long id, ArrayList<Long> flightsIds, String name, long price) {
@@ -33,7 +43,7 @@ public class Hotel {
         return price;
     }
 
-    @NonNull
+
     @Override
     public String toString() {
         return "Hotel{" +
